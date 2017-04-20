@@ -7,6 +7,7 @@ public class Application {
 
         // shift alt f = format
         // sout tab
+        // ctrl + space = autocomplete
 
     }
 }
