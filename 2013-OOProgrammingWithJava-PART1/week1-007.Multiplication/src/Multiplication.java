@@ -4,6 +4,9 @@ public class Multiplication {
 
         int a = 1337;
         int b = 42;
+        int product = a * b;
+        
+        System.out.println(a + " * " + b +  " = " + product);
 
         // Program your solution here. Remember to use variables a and b!
     }
