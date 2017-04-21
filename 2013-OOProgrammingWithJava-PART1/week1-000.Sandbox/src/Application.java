@@ -8,6 +8,7 @@ public class Application {
         // shift alt f = format
         // sout tab
         // ctrl + space = autocomplete
+        // ctrl and r to rename things fast
 
     }
 }
