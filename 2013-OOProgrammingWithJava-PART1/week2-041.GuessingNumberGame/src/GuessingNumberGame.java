@@ -8,8 +8,24 @@ public class GuessingNumberGame {
         Scanner reader = new Scanner(System.in);
         int numberDrawn = drawNumber();
 
-        // program your solution here. Do not touch the above lines!
-        
+        System.out.println("Guess a number: ");
+        int guess = 200;
+        int count = 0;
+
+        while (numberDrawn != guess) {
+            guess = Integer.parseInt(reader.nextLine());
+            if (numberDrawn > guess) {
+                System.out.print("The number is greater");
+            } else if (numberDrawn < guess) {
+                System.out.print("The number is lesser");
+            } else {
+                System.out.print("Congratulations, your guess is correct!");
+            }
+            count++;
+            System.out.print(", guesses made: " + count);
+            
+
+        }
     }
 
     // DO NOT MODIFY THIS!
