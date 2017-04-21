@@ -2,10 +2,15 @@
 public class Least {
 
     public static int least(int number1, int number2) {
-        // write program code here
-        // do not print anything inside the method
-        // method needs a return in the end
-        return -1;
+
+        int min = 0;
+        if (number1 < number2) {
+            min = number1;
+        } else {
+            min = number2;
+        }
+
+        return min;
     }
 
     public static void main(String[] args) {
