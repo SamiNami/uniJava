@@ -3,7 +3,9 @@ import java.util.ArrayList;
 public class LengthsOfStrings {
     public static ArrayList<Integer> lengths(ArrayList<String> list) {
         ArrayList<Integer> lengthList = new ArrayList<Integer>();
-        // write code here
+        for(String strings : list){
+            lengthList.add(strings.length());
+        }
         
         return lengthList;
     }
