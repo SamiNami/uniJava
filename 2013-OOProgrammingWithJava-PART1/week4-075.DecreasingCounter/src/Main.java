@@ -3,7 +3,8 @@ public class Main {
         DecreasingCounter counter = new DecreasingCounter(10);
 
         counter.printValue();
-        counter.decrease();
-        counter.decrease();
+        counter.reset();
+        counter.setInitial();
+        counter.printValue();
     }
 }
