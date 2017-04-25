@@ -16,7 +16,6 @@ public class Counter {
     public Counter(int startingValue, boolean check) {
         this.number = startingValue;
         this.check = check;
-
     }
 
     public Counter(int startingValue) {

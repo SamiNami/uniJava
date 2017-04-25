@@ -31,3 +31,16 @@ public class Application {
 // ctrl and r to rename things fast
 // }
 // }
+/*  Go inside of the code block of the class, but outside of all methods and
+    simultaneously press Ctrl+Space. If your class, for example, has an object
+    variable balance, NetBeans will offer you the opportunity to generate the getter
+    and setter methods, and a constructor that sets a starting value for the
+    1object variable. */
+
+double lunchPrize = 4.00;
+        if(cashGiven < lunchPrize){
+            return cashGiven;
+        }
+        this.cashInRegister += cashGiven;
+        this.economicalSold++;
+        return cashGiven - lunchPrize;
