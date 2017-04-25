@@ -1,14 +1,21 @@
 import java.util.Random;
 
 public class PasswordRandomizer {
-    // Define the variables
+    private Random random = new Random();
+    private int length;
 
     public PasswordRandomizer(int length) {
-        // Initialize the variable
+      this.length = length;  
     }
 
     public String createPassword() {
-        // write code that returns a randomized password
-        return "";
+        String password = "";
+        while(password.length() < this.length){
+            int number = random.nextInt(25) +1;
+            char symbol = "abcdefghijklmnopqrstuvwxyz".charAt(number);
+            password += symbol;
+        }
+        
+        return password;
     }
 }
