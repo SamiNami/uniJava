@@ -15,27 +15,26 @@ public class Counter {
 
     public Counter(int startingValue, boolean check) {
         this.number = startingValue;
+        this.check = check;
 
-        if (check) {
-            this.check = true;
-        }
     }
 
     public Counter(int startingValue) {
-        this.number = startingValue;
-        this.check = false;
+        //this.number = startingValue;
+        //this.check = false;
+        this(startingValue,false);
     }
 
     public Counter(boolean check) {
-        this.number = 0;
-        if (check) {
-            this.check = true;
-        }
+        //this.number = 0;
+        //this.check = true;
+        this(0,check);
     }
 
     public Counter() {
-        this.number = 0;
-        check = false;
+        //this.number = 0;
+        //check = false;
+        this(0,false);
     }
 
     public int value() {
@@ -43,18 +42,11 @@ public class Counter {
     }
 
     public void increase() {
-        this.number++;
+        increase(1);
     }
 
     public void decrease() {
-        if (this.check) {
-            if (this.number > 0) {
-                this.number--;
-            }
-
-        } else {
-            this.number--;
-        }
+        decrease(1);
     }
 
     public void increase(int increaseAmount) {
@@ -64,16 +56,14 @@ public class Counter {
     }
 
     public void decrease(int decreaseAmount) {
-        if (decreaseAmount >= 0) {
-            if (check) {
-                this.number -= decreaseAmount;
-                if(this.number < 0){
-                    this.number = 0;
-                }
-                
-            } else {
-                this.number -= decreaseAmount;
-            }
+        if (decreaseAmount < 0) {
+            return;
+        }
+        
+        this.number -= decreaseAmount;
+        
+        if(this.check && this.number <0){
+            this.number = 0;
         }
 
     }
