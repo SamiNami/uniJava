@@ -29,5 +29,32 @@ public class MyDate {
 
         return false;
     }
+    
+    public int differenceInYears(MyDate comparedDate){
+        
+        MyDate earlier = comparedDate;
+        MyDate later = this;
+        
+        if(this.earlier(comparedDate)){
+          earlier = this;
+          later = comparedDate;
+        }
+       
+        
+        
+        int yearDiff = later.year - earlier.year;
+        int monthDiff = later.month - earlier.month;
+        int dayDiff = later.day - earlier.day;
+        
+        if(dayDiff < 0){
+            monthDiff--;
+        }
+        
+        if(monthDiff < 0){
+            yearDiff--;
+        }
+        
+        return yearDiff;
+    }
 
 }
