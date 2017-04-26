@@ -37,10 +37,3 @@ public class Application {
     and setter methods, and a constructor that sets a starting value for the
     1object variable. */
 
-double lunchPrize = 4.00;
-        if(cashGiven < lunchPrize){
-            return cashGiven;
-        }
-        this.cashInRegister += cashGiven;
-        this.economicalSold++;
-        return cashGiven - lunchPrize;
