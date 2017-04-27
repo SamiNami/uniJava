@@ -1,12 +1,33 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-        // implement your program here
-        // do not put all to one method/class but rather design a proper structure to your program
+        Scanner reader = new Scanner(System.in);
+        GradeList list = new GradeList();
         
-        // Your program should use only one Scanner object, i.e., it is allowed to call 
-        // new Scanner only once. If you need scanner in multiple places, you can pass it as parameter
+        while(true){
+            System.out.println("Type exam scores, -1 completes");
+            int score = Integer.parseInt(reader.nextLine());
+            
+            if(score == -1){
+                break;
+            }
+            
+            list.addGrade(new Grade(score));
+            
+        }
+        
+        list.printGrades();
+        
+        
+        System.out.println("Grade distribution: ");
+        
+        for(Grade grade : list.searchByGrade(5)){
+            System.out.println(grade);
+        }
+        
+        System.out.println("Acceptance percentage: ");
+        
     }
 }
