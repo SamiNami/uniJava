@@ -9,7 +9,13 @@ public class BinarySearch {
                 return true;
             }
 
-            // restrict the search area 
+            if (array[middle] < searchedValue) {
+               beginning = middle +1; 
+            }
+            else{
+                end = middle -1;
+            }
+            
         }
         return false;
     }

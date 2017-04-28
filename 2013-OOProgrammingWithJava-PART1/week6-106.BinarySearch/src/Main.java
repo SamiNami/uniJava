@@ -18,6 +18,6 @@ public class Main {
 
         boolean tulos = BinarySearch.search(taulukko, Integer.parseInt(etsittavaLuku));
 
-        // Print here the result
+        System.out.println(tulos);
     }
 }
