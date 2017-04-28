@@ -27,14 +27,14 @@ public class Main {
 
                 data.observeBird(name);
 
-            } else if (command.equals("Statistics")){
+            } else if (command.equals("Statistics")) {
                 data.printBirds();
-            } else if (command.equals("Show")){
+            } else if (command.equals("Show")) {
                 System.out.println("What?");
                 String name = reader.nextLine();
-                
+
                 System.out.println(data.findBird(name));
-                
+
             }
 
         }
