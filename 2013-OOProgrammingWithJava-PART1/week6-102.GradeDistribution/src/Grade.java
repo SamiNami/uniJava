@@ -1,4 +1,4 @@
-
+// way better way to do this project was to just have an Int array
 public class Grade {
 
     private int score;

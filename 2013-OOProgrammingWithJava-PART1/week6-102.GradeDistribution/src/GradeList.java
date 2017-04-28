@@ -17,7 +17,7 @@ public class GradeList {
         }
     }
     
-    public ArrayList<Grade> searchByGrade(int value) {
+    public int searchByGrade(int value) {
         ArrayList<Grade> found = new ArrayList<Grade>();
 
         for (Grade grade : list) {
@@ -25,8 +25,12 @@ public class GradeList {
                 found.add(grade);
             }
         }
-        return found;
+        int length = found.size();
+        return length;
     }
+    
+    
+    
     
     
 }
