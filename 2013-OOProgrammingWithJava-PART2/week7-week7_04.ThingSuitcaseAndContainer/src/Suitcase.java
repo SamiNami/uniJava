@@ -3,14 +3,12 @@ import java.util.ArrayList;
 
 public class Suitcase {
 
-    private ArrayList<Thing> suitcase;
-    private int things;
+    private ArrayList<Thing> suitcase;    
     private int weight;
     private int maxWeight;
 
     public Suitcase(int maxWeight) {
-        this.weight = 0;
-        this.things = 0;
+        this.weight = 0;        
         this.maxWeight = maxWeight;
         this.suitcase = new ArrayList<Thing>();
     }
@@ -21,19 +19,19 @@ public class Suitcase {
         }
 
         suitcase.add(thing);
-        things++;
+        
         weight += thing.getWeight();
     }
 
     public String toString() {
 
-        if (this.things == 0) {
+        if (this.suitcase.size() == 0) {
             return "empty (" + this.weight + " kg)";
-        } else if (this.things == 1) {
-            return this.things + " thing (" + this.weight + " kg)";
+        } else if (this.suitcase.size() == 1) {
+            return this.suitcase.size() + " thing (" + this.weight + " kg)";
         }
 
-        return this.things + " things (" + this.weight + " kg)";
+        return this.suitcase.size() + " things (" + this.weight + " kg)";
     }
 
     public void printThings() {
