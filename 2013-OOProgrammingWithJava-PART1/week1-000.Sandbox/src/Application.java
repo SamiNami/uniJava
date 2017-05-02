@@ -23,3 +23,7 @@ public class Application {
     variable balance, NetBeans will offer you the opportunity to generate the getter
     and setter methods, and a constructor that sets a starting value for the
     1object variable. */
+
+/*NetBeans is able to show a class API, if needed. If you write a class name
+and add the relative import sentence, you can right click on the class name
+and and choose Show Javadoc. This opens the class API description in your browser.*/
