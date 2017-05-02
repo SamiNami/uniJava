@@ -27,3 +27,8 @@ public class Application {
 /*NetBeans is able to show a class API, if needed. If you write a class name
 and add the relative import sentence, you can right click on the class name
 and and choose Show Javadoc. This opens the class API description in your browser.*/
+
+/*NetBeans allows for the automatic creation of the equals and hashCode methods.
+From the menu Source -> Insert Code, you can choose equals() and hashCode(). 
+After this, NetBeans asks which object variables the methods shall use.
+*/
