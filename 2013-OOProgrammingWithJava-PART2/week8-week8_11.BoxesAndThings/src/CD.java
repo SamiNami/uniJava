@@ -14,8 +14,8 @@ public class CD implements ToBeStored {
     }
 
     @Override
-    public double weight() {
-        return this.year;
+    public double weight() { 
+       return this.weight;
     }
 
     @Override
