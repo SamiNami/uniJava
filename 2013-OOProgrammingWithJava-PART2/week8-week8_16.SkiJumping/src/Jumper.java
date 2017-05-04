@@ -1,6 +1,8 @@
+
 import java.util.*;
 
-public class Jumper {
+public class Jumper implements Comparable<Jumper> {
+
     private String name;
     private int points;
     private ArrayList<Integer> jumps;
@@ -10,30 +12,36 @@ public class Jumper {
         this.points = 0;
         this.jumps = new ArrayList<Integer>();
     }
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    public int getPoints(){
+
+    public int getPoints() {
         return this.points;
     }
-    
-    public ArrayList<Integer> getJumps(){
+
+    public ArrayList<Integer> getJumps() {
         return this.jumps;
     }
-    
-    public void addPoints(int points){
+
+    public void addPoints(int points) {
         this.points += points;
     }
-    
-    public void addJump(int length){
+
+    public void addJump(int length) {
         this.jumps.add(length);
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return this.name + " (" + this.points + " points)";
     }
-    
+
+    public int compareTo(Jumper other) {
+
+        return this.points - other.getPoints();
+
+    }
+
 }
