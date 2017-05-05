@@ -27,8 +27,7 @@ public class PersonalMultipleEntryDictionary implements  MultipleEntryDictionary
     }
 
     @Override
-    public Set<String> translate(String word) {
-         
+    public Set<String> translate(String word) {         
         return this.dictonary.get(word);
     }
 
