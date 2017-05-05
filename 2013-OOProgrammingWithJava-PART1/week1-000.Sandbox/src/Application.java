@@ -32,3 +32,11 @@ and and choose Show Javadoc. This opens the class API description in your browse
 From the menu Source -> Insert Code, you can choose equals() and hashCode(). 
 After this, NetBeans asks which object variables the methods shall use.
 */
+
+
+/* Anther thing you can do to set up a character set is using an environment
+variable. Macintosh and Windows users can set up an the value of the
+environment variable JAVA_TOOL_OPTIONS to the string -Dfile.encoding=UTF8.
+In such case, Java always uses UTF-8 characters as a default.
+
+*/
