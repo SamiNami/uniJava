@@ -1,6 +1,6 @@
+package lookup;
 
 import java.util.Scanner;
-
 
 public class Main {
 
@@ -9,9 +9,9 @@ public class Main {
         // ATTENTION: In your program, you can create only one instance of class Scanner!
         Scanner reader = new Scanner(System.in);
         PhoneSearch phonebook = new PhoneSearch();
-        
-        UserInterface ui = new UserInterface(reader,phonebook);
+
+        UserInterface ui = new UserInterface(reader, phonebook);
         ui.start();
-        
+
     }
 }

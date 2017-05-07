@@ -1,6 +1,6 @@
+package lookup;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -11,22 +11,20 @@ public class PhoneSearch {
     private Map<String, Person> personByName = new HashMap<String, Person>();
     private Map<String, Person> personByNumber = new HashMap<String, Person>();
     //private ArrayList<Person> personlist = new ArrayList<Person>();
-    
+
     public void addNumber(String name, String number) {
 
         if (personByName.containsKey(name)) {
             personByName.get(name).addNumber(number);
-            
+
             Person person = personByName.get(name);
             personByNumber.put(number, person);
-                        
-            //personlist.add(person); 
-       } else {
+        } else {
             Person person = new Person(name);
             person.addNumber(number);
+
             personByName.put(name, person);
-            personByNumber.put(number, person);            
-            
+            personByNumber.put(number, person);
         }
 
     }
@@ -41,22 +39,21 @@ public class PhoneSearch {
         return person.getNumbers();
 
     }
-    
-    public String getName(String number){
-        
-        if(personByNumber.get(number) == null){
+
+    public String getName(String number) {
+
+        if (personByNumber.get(number) == null) {
             return null;
         }
-        
+
         return personByNumber.get(number).getName();
     }
-    
-    public void addAddress(String name,String street, String city){
+
+    public void addAddress(String name, String street, String city) {
         String address = street + " " + city;
-        
-        
+
         if (personByName.containsKey(name)) {
-            personByName.get(name).addAddress(address);           
+            personByName.get(name).addAddress(address);
         } else {
             Person person = new Person(name);
             person.addAddress(address);
@@ -65,59 +62,58 @@ public class PhoneSearch {
             personByNumber.put(null, person);
         }
     }
-    
-    public List<String> getAdresses(String name){
-        
+
+    public List<String> getAdresses(String name) {
+
         if (personByName.get(name) == null) {
             return null;
         }
-        
+
         return personByName.get(name).getAdresses();
     }
-    
-    public List<Person> searchPhonebook(String term){
+
+    public List<Person> searchPhonebook(String term) {
         List<Person> found = new ArrayList<Person>();
-        
-        for(String key : personByName.keySet()){
-            if(key.contains(term)){
+
+        for (String key : personByName.keySet()) {
+            if (key.contains(term)) {
                 found.add(personByName.get(key));
             }
         }
-        
+
         List<Person> unfilteredpeople = new ArrayList<Person>();
-        
-        for(String key : personByName.keySet()){
+
+        for (String key : personByName.keySet()) {
             unfilteredpeople.add(personByName.get(key));
         }
-        
-        for(Person person : unfilteredpeople){
-            if(person.checkAddress(term)){
+
+        for (Person person : unfilteredpeople) {
+            if (person.checkAddress(term)) {
                 found.add(person);
             }
         }
-        
+
         Collections.sort(found);
-        
+
         return found;
     }
-    
-    public boolean deleteInformation(String name){
-        
-        if(!personByName.containsKey(name)){
+
+    public boolean deleteInformation(String name) {
+
+        if (!personByName.containsKey(name)) {
             return false;
         }
         Person person = personByName.get(name);
-                
+
         List<String> numbers = person.getNumbers();
-                
-        for(String number : numbers){                       
-            personByNumber.remove(number);            
+
+        for (String number : numbers) {
+            personByNumber.remove(number);
         }
-        
+
         person.clearInfo();
-        
+
         return true;
     }
-    
-    
+
 }

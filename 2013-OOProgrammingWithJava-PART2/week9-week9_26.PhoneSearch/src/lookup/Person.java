@@ -1,9 +1,10 @@
+package lookup;
 
 import java.util.ArrayList;
 import java.util.List;
 
+public class Person implements Comparable<Person> {
 
-public class Person implements Comparable<Person>{
     private String name;
     private List<String> numbers;
     private List<String> addresses;
@@ -13,50 +14,48 @@ public class Person implements Comparable<Person>{
         this.numbers = new ArrayList<String>();
         this.addresses = new ArrayList<String>();
     }
-    
-    
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    
-    public void addNumber(String number){
+
+    public void addNumber(String number) {
         this.numbers.add(number);
     }
-    
-    public void addAddress(String address){
+
+    public void addAddress(String address) {
         this.addresses.add(address);
     }
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    public List<String> getNumbers(){
+
+    public List<String> getNumbers() {
         return this.numbers;
     }
-    
-    public List<String> getAdresses(){
+
+    public List<String> getAdresses() {
         return this.addresses;
     }
-    
-    public boolean checkAddress(String term){
-        for(String address : this.addresses){
-            if(address.contains(term)){
+
+    public boolean checkAddress(String term) {
+        for (String address : this.addresses) {
+            if (address.contains(term)) {
                 return true;
             }
         }
         return false;
     }
-    
-    public void clearInfo(){
+
+    public void clearInfo() {
         this.numbers.clear();
         this.addresses.clear();
     }
-    
+
     @Override
     public int compareTo(Person another) {
-        return this.getName().compareTo(another.getName());        
-        
+        return this.getName().compareTo(another.getName());
+
     }
 }
