@@ -1,5 +1,5 @@
-package lookup;
 
+import lookup.*;
 import java.util.Scanner;
 
 public class Main {
