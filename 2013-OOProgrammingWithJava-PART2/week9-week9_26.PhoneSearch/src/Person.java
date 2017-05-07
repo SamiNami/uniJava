@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private List<String> numbers;
     private List<String> addresses;
@@ -40,6 +40,23 @@ public class Person {
         return this.addresses;
     }
     
+    public boolean checkAddress(String term){
+        for(String address : this.addresses){
+            if(address.contains(term)){
+                return true;
+            }
+        }
+        return false;
+    }
     
+    public void clearInfo(){
+        this.numbers.clear();
+        this.addresses.clear();
+    }
     
+    @Override
+    public int compareTo(Person another) {
+        return this.getName().compareTo(another.getName());        
+        
+    }
 }
