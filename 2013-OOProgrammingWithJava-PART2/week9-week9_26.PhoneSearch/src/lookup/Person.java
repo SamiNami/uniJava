@@ -6,6 +6,7 @@ import java.util.List;
 public class Person implements Comparable<Person> {
 
     private String name;
+    // using set is better to prevent duplicates
     private List<String> numbers;
     private List<String> addresses;
 

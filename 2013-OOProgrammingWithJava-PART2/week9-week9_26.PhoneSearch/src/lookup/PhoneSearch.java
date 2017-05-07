@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 public class PhoneSearch {
-
+    // using a TreeMap would have been better
     private Map<String, Person> personByName = new HashMap<String, Person>();
     private Map<String, Person> personByNumber = new HashMap<String, Person>();
-    //private ArrayList<Person> personlist = new ArrayList<Person>();
+    
 
     public void addNumber(String name, String number) {
-
+        
         if (personByName.containsKey(name)) {
             personByName.get(name).addNumber(number);
 
