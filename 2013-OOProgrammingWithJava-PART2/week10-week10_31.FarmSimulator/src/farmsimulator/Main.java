@@ -1,15 +1,24 @@
 package farmsimulator;
 
-public class Main {
-    public static void main(String[] args) {
-        BulkTank tank = new BulkTank();
-tank.getFromTank(100);
-tank.addToTank(25);
-tank.getFromTank(5);
-System.out.println(tank);
+import java.util.LinkedList;
 
-tank = new BulkTank(50);
-tank.addToTank(100);
-System.out.println(tank);
+public class Main {
+
+    public static void main(String[] args) {
+        Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+        MilkingRobot robot = new MilkingRobot();
+        farm.installMilkingRobot(robot);
+
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+
+        farm.liveHour();
+        farm.liveHour();
+
+        farm.manageCows();
+
+        System.out.println(farm);
     }
+
 }
